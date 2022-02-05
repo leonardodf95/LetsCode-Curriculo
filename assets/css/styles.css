@@ -70,6 +70,8 @@ variaveis no css
     margin:  0;
   }
 
+  h1,
+  h2,
   h3 {
       color: var(--title-color);
       font-weight: var(--font-medium);
@@ -121,8 +123,10 @@ variaveis no css
     bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
+    background-color: var(--body-color);
     box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
-    transition: 0.3s;    
+    transition: 0.3s;
+        
 }
 .nav {
     height: (--header-height);
@@ -133,8 +137,13 @@ variaveis no css
 
 .nav_logo,
 .nav_toggle {
-    font-size: 1.2rem;
-    cursor: pointer;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav_toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .nav_list {
@@ -244,6 +253,7 @@ variaveis no css
   .education_content,
   .experience_content {
   display: flex;
+ 
 }
   .education_time,
   .experience_time {
@@ -273,13 +283,19 @@ variaveis no css
 .education_data,
 .experience_data {
   gap: 0.5rem;
+  
 }
 
 .education_title,
 .experience_title {
   font-size: var(--h3-font-size);
-}
+  }
 
+  .experience_description {
+    text-align: justify;
+  }
+
+  .experience_company,
 .education_studies {
   font-size: var(--small-font-size);
   color: var(--title-color);
@@ -289,3 +305,124 @@ variaveis no css
   font-size: var(--smaller-font-size);
 }
 
+.skills_content {
+  grid-template-columns: repeat(2, 1fr);
+  gap:0;
+}
+
+.skills_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills_circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: 0.2rem;
+  margin-left: 0.75rem;
+}
+
+.certificate_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.certificate_description {
+  text-align: justify;
+  text-indent: 1.5rem;
+}
+
+.interests_container {
+  grid-template-columns: repeat(3, 1fr);
+  
+  margin-top: var(--mb-2);
+}
+
+.interests_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests_icon {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.25rem;
+}
+
+.interests_name {
+  text-align: center;
+}
+
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: red;
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+}
+
+.scrolltop_icon {
+  font-size: 20px;
+
+}
+
+@media screen and (min-width: 968px) {
+
+body {
+  margin: 3rem 0;
+}
+
+.bd-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-header,
+.scrolltop {
+  display: none;
+}
+  
+.resume {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  background-color: var(--container-color);
+  box-shadow: 0 0 8px rgb(38, 38, 46);
+}
+
+.resume_left {
+  background-color: gray;
+}
+
+.resume_left,
+.resume_right {
+  padding: 0 1.5rem;
+}
+
+.section-title,
+.profile_description {
+  text-align: initial;
+}
+
+.home_container {
+  gap: 1.5rem;
+}
+
+
+
+.interests_container {
+  grid-template-columns: repeat(4, max-content);
+  column-gap:3
+}
+}
