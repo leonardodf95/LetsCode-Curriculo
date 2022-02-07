@@ -8,12 +8,12 @@ variaveis no css
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --title-color: #0b0a0a;
-  --text-color: #403a3a;
-  --text-color-light: #707070;
-  --container-color: #fafafa;
-  --container-color-alt: #f0efef;
-  --body-color: #fcfcfc;
+  --title-color: #D8E9A8;
+  --text-color: #4E9F3D;
+  --text-color-light: #4E9F3D;
+  --container-color: #191A19;
+  --container-color-alt: #1E5128;
+  --body-color: #ffffff;
 
   /*========== Font and typography ==========*/
   --body-font: "Ubuntu", sans-serif;
@@ -58,7 +58,7 @@ body {
   padding: 0;
   font-family: var(--body-font);
   font-size: var(normal-font-size);
-  background-color: var(--body-color);
+  background-color: #D8E9A8;
   color: var(--text-color)
 }
 
@@ -124,7 +124,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--container-color-alt);
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 
@@ -172,13 +172,16 @@ img {
 }
 
 @media screen and (max-width: 968px) {
+  body {
+    background-color: var(--container-color);
+  }
   .nav_div {
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
-    background-color: var(--body-color);
+    background-color: var(--container-color-alt);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
@@ -429,7 +432,7 @@ img {
   }
 
   .resume_left {
-    background-color: var(--container-color);
+    background-color: var(--container-color-alt);
   }
 
   .resume_left,
