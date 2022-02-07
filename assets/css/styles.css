@@ -337,7 +337,7 @@ variaveis no css
 }
 
 .interests_container {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   
   margin-top: var(--mb-2);
 }
@@ -378,6 +378,26 @@ variaveis no css
 
 }
 
+.languages_circle {
+ 
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-left: 00.75rem;
+  margin-right: 00.2rem;
+}
+
+.languages_names {
+  display: flex;
+  align-items: center;
+}
+
+.language_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media screen and (min-width: 968px) {
 
 body {
@@ -402,7 +422,7 @@ body {
 }
 
 .resume_left {
-  background-color: gray;
+  background-color: var(--container-color);
 }
 
 .resume_left,
@@ -411,7 +431,7 @@ body {
 }
 
 .section-title,
-.profile_description {
+ {
   text-align: initial;
 }
 
@@ -422,7 +442,7 @@ body {
 
 
 .interests_container {
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(5, max-content);
   column-gap:3
 }
 }
